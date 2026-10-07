@@ -114,7 +114,7 @@ class AudioVectorRepositoryImpl(
         return _recordingsFlow.asStateFlow()
     }
 
-    override suspend fun insertSegments(segments: List<RecordingSegment>) = withContext(Dispatchers.IO) {
+    override suspend fun insertSegments(segments: List<RecordingSegment>): Unit = withContext(Dispatchers.IO) {
         if (segments.isEmpty()) return@withContext
         dbMutex.withLock {
             segments.forEach { segment ->
@@ -192,7 +192,7 @@ class AudioVectorRepositoryImpl(
         recordingId: Long,
         isIndexed: Boolean,
         chunkCount: Int
-    ) = withContext(Dispatchers.IO) {
+    ): Unit = withContext(Dispatchers.IO) {
         dbMutex.withLock {
             val recording = recordingMap[recordingId] ?: recordingBox?.get(recordingId)
             if (recording != null) {
@@ -205,14 +205,14 @@ class AudioVectorRepositoryImpl(
         }
     }
 
-    override suspend fun deleteRecording(recordingId: Long) = withContext(Dispatchers.IO) {
+    override suspend fun deleteRecording(recordingId: Long): Unit = withContext(Dispatchers.IO) {
         dbMutex.withLock {
             val recording = recordingMap.remove(recordingId)
             recordingBox?.remove(recordingId)
 
             val segmentsToRemove = segmentList.filter { it.recordingId == recordingId }
             segmentList.removeAll(segmentsToRemove)
-            segmentBox?.remove(segmentsToRemove.map { it.id })
+            segmentBox?.remove(segmentsToRemove)
 
             recording?.filePath?.let { path ->
                 try {

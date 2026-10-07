@@ -12,6 +12,7 @@ objectbox = "4.0.3"
 mediapipeTasksAudio = "0.10.14"
 mediapipeTasksText = "0.10.14"
 tensorflowLite = "2.16.1"
+tensorflowLiteSupport = "0.4.4"
 navigationCompose = "2.8.1"
 materialIconsExtended = "1.7.2"
 
@@ -45,7 +46,7 @@ androidx-media3-common = { group = "androidx.media3", name = "media3-common", ve
 mediapipe-tasks-audio = { group = "com.google.mediapipe", name = "tasks-audio", version.ref = "mediapipeTasksAudio" }
 mediapipe-tasks-text = { group = "com.google.mediapipe", name = "tasks-text", version.ref = "mediapipeTasksText" }
 tensorflow-lite = { group = "org.tensorflow", name = "tensorflow-lite", version.ref = "tensorflowLite" }
-tensorflow-lite-support = { group = "org.tensorflow", name = "tensorflow-lite-support", version.ref = "tensorflowLite" }
+tensorflow-lite-support = { group = "org.tensorflow", name = "tensorflow-lite-support", version.ref = "tensorflowLiteSupport" }
 
 # Local Vector DB: ObjectBox with HNSW Vector Indexing
 objectbox-android = { group = "io.objectbox", name = "objectbox-android", version.ref = "objectbox" }

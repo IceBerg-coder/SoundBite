@@ -1,4 +1,11 @@
 pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "io.objectbox") {
+                useModule("io.objectbox:objectbox-gradle-plugin:${requested.version ?: "4.0.3"}")
+            }
+        }
+    }
     repositories {
         google {
             content {
@@ -22,4 +29,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "SoundBite"
 include(":app")
-

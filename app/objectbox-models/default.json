@@ -1,0 +1,107 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:4070625716659480664",
+      "lastPropertyId": "7:8809422243683965317",
+      "name": "RecordingEntity",
+      "properties": [
+        {
+          "id": "1:3242071361379539747",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3324595351591321189",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "3:6227404908671965210",
+          "name": "filePath",
+          "type": 9
+        },
+        {
+          "id": "4:4723387708009324404",
+          "name": "durationMs",
+          "type": 6
+        },
+        {
+          "id": "5:9041735188091399386",
+          "name": "createdAt",
+          "indexId": "1:1725557463013164197",
+          "type": 6,
+          "flags": 8
+        },
+        {
+          "id": "6:5056162740884865813",
+          "name": "isIndexed",
+          "type": 1
+        },
+        {
+          "id": "7:8809422243683965317",
+          "name": "chunkCount",
+          "type": 5
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:8006539306399802553",
+      "lastPropertyId": "6:6387797417275572089",
+      "name": "RecordingSegment",
+      "properties": [
+        {
+          "id": "1:4942879145754814317",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4444877854953371798",
+          "name": "recordingId",
+          "indexId": "2:4212636235134119072",
+          "type": 6,
+          "flags": 8
+        },
+        {
+          "id": "3:8034827481751991051",
+          "name": "startTimestampMs",
+          "type": 6
+        },
+        {
+          "id": "4:7285388306086187199",
+          "name": "endTimestampMs",
+          "type": 6
+        },
+        {
+          "id": "5:6595855135318881142",
+          "name": "embedding",
+          "indexId": "3:6037845375545369134",
+          "type": 28,
+          "flags": 8
+        },
+        {
+          "id": "6:6387797417275572089",
+          "name": "textTranscript",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:8006539306399802553",
+  "lastIndexId": "3:6037845375545369134",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
