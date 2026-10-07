@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SoundBite</string>
+    <string name="channel_recording_name">SoundBite Audio Recording</string>
+    <string name="channel_recording_desc">Ongoing audio recording status</string>
+    <string name="channel_indexing_name">SoundBite Vector Indexing</string>
+    <string name="channel_indexing_desc">On-device semantic audio indexing</string>
+</resources>
+
